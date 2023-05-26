@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Dynamic Styling</h1>
+    </header>
+    <section id="styling">
+      <!-- If there is class and style together there is a special syntax we can use in the Inline styling. We can use  {'border-color': boxASelected ? 'red' : '#ccc'} or {borderColor: boxASelected ? 'red' : '#ccc'} use camel case for the property name  in the styling. We don't use inline CSS so we commented it. 
+      -->
+      <!-- :style="{borderColor: boxASelected ? 'red' : '#ccc'}" -->
+
+      <!-- This way we can bind the class with the styles in the style.css dynamically. -->
+
+      <!-- :class="{demo: true, active: boxASelected}" -->
+
+      <!-- If we do it more dynamically we can keep the class = "demo" as it is and use the class binding just for setting the states of the boxASelected boxBSelected boxCSelected.-->
+      <!--
+        class="demo" 
+        :class="{active: boxASelected}" -->
+
+      <!-- We can also use computed properties to bind with the classes. -->
+
+      <!-- class="demo" :class="boxBClasses" -->
+
+      <!-- We can also use the array syntax to bind the classes. -->
+      <div
+        :class="['demo', {active: boxASelected}]"
+        @click="boxSelected('A')"
+      ></div>
+      <div class="demo" :class="boxBClasses" @click="boxSelected('B')"></div>
+      <div class="demo" :class="boxCClasses" @click="boxSelected('C')"></div>
+    </section>
+  </body>
+</html>

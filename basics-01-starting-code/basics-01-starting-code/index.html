@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+    </header>
+    <section id="user-goal">
+      <h2>My Course Goal</h2>
+      <!-- {{ courseGoal }} This syntax is used in HTML and only understandable by Vue. We can refer the object returned by  data option of the createApp. This syntax is called "Interpolation".-->
+
+      <p>{{ courseGoal1 }}</p>
+
+      <!-- We can write data properties and also call (not point, we need to give () after function name)functions created in the methods() of Vue.createApp() using this syntax -->
+
+      <p>{{ outputGoal() }}</p>
+
+      <!-- Here if the output we want to print contains any html content we need to use v-html in the HTML tag like v-bind -->
+
+      <p v-html="outputGoal()"></p>
+
+      <!-- v-bind is a vue directive which is instructing the HTML element anchor tags href to bind with the property name that is mentioned in the return object of data() option -->
+      <p>Learn more <a v-bind:href="vueLink">about Vue</a></p>
+    </section>
+  </body>
+</html>
