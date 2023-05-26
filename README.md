@@ -16,4 +16,4 @@ Section 2 contains:
     5. Directive shorthands
     6. Dynamic styling with Inline style
     7. Dynamic accessibility of CSS using 
-       classes, cmoputed properties and array syntax
+       classes, computed properties and array syntax
