@@ -49,13 +49,13 @@ const app = Vue.createApp({
   methods: {
     // Again this keyword is used to access the data of the Vue instance
 
-    add(num) {
-      this.counter = this.counter + num;
-    },
+    // add(num) {
+    //   this.counter = this.counter + num;
+    // },
 
-    reduce(num) {
-      this.counter = this.counter - num;
-    },
+    // reduce(num) {
+    //   this.counter = this.counter - num;
+    // },
 
     setValue1(event) {
       this.name = event.target.value;
